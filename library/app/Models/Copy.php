@@ -9,4 +9,13 @@ class Copy extends Model
 {
     /** @use HasFactory<\Database\Factories\CopyFactory> */
     use HasFactory;
+
+    protected $primaryKey = 'copy_id';
+
+    //auto increment értékeket ide nem írunk
+    protected $fillable = [
+        'book_id',
+        'user_id'
+    ];
+
 }
